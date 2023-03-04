@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <ul style="list-style: none">
+        {%for articulo in articulos %}
+        <li>
+            <img width="700" height="700" src="{{ asset('imagenes') }}/{{articulo.imagen}}" />
+            <br>
+            <span>Articulo: {{articulo.id}}</span>
+            <h2>{{articulo.artista}} - {{articulo.titulo}}</h2>
+            <a href="{{ path('articulo', {'id':articulo.id})}}">Detalles:</a>
+            <br>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}	

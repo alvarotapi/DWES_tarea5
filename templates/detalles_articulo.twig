@@ -1,0 +1,10 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div>
+		<img width="700" height="700" src="{{ asset('imagenes') }}/{{articulo.imagen}}" />
+		<br>
+		<span>Id de artículo: {{articulo.id}}</span>
+		<h2>{{articulo.artista}} - {{articulo.titulo}}</h2>
+	</div>
+{% endblock %}	

@@ -1,0 +1,20 @@
+{% extends "base.twig" %}
+
+{% block content %}		
+	<div>
+		{%for sugerencia in sugerencias %}
+			<form action="" method="get">	
+				<p>Usuario: {{sugerencia.usuario}}</p>
+				<p>Sugerencia: {{sugerencia.sugerencia}}</p>
+				<p>
+					{%for campo in formulario %}
+						{{campo[0]}} <input type="{{campo[1]}}" 
+						name="{{campo[2]}}" value="{{campo[3]}}">
+					{% endfor %}
+				</p>
+				<br />
+			</form>
+		{% endfor %}
+	</div>
+	<br>
+{% endblock %}
